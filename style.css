@@ -1,0 +1,724 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/* Barre de défilement*/
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #666;
+    background: linear-gradient(circle right rgb(0,0,0) rgb(255,255,255));
+    border-radius: 10px;
+    border: 3px solid #666;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+}
+
+
+/* Image de fond */
+
+.wallpaper_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: -1;
+    background-size: cover;
+    background-position: center; 
+}
+
+
+/*Bouton pour revenir vers le haut*/
+
+.to-top {
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    background: radial-gradient(circle at 50% 50%, rgb(0, 0, 0), rgb(0,191,255));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0px;
+    right: 60px;
+    margin-bottom: 2%;
+    opacity: 0;
+    transition: all .6s;
+}
+
+.to-top.active{
+    bottom: 0px;
+    opacity: 1;
+}
+
+/* NavBar*/
+
+.navbar{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    list-style-type: none;
+    align-items: center;
+    background-color: black;
+}
+
+.navbar .nav-links{
+    display: flex;
+}
+
+.navbar .nav-links ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar .nav-links ul li{
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li a{
+    text-decoration: none; 
+    color: white;
+}
+
+.navbar .nav-links ul li a:hover{
+    color: gray;
+}
+
+.navbar .CV_tel{
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: rgb(66, 50, 156);
+    padding: 8px;
+}
+
+.navbar .CV_tel:hover{
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar .nav-links ul .CV_tel2{
+    display: none;
+}
+
+
+.menu_hamburger{
+    display: none;
+    position: absolute;
+    width: 40px;
+    right: 50px;
+    top: 3%;
+}
+
+
+
+/*https://fr.freepik.com/photos-vecteurs-libre/background-website*/
+
+/* Carte principale*/
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    width: 34vh;
+    height: 62vh;
+    padding: 2%;
+    background: radial-gradient(circle at 50% 50%, rgb(0, 0, 0), rgb(51, 79, 129));
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 4% 0;
+}
+
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.card h1{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.card ul{
+    display: flex;
+    flex-direction:column;
+    margin-bottom: 30px;
+    color: aliceblue;
+}
+
+.card a{
+    display: flex;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 3% 0;
+    justify-content: center;
+    background-color: rgb(0,0,0);
+    color: aliceblue;
+}
+
+.card a:hover{
+    background-color: black;
+    color: lightblue; 
+}
+
+
+/* A propos de moi*/
+
+.about{
+    background: radial-gradient(circle at 50% 50%, rgb(0, 0, 0), rgb(51, 79, 129));
+    min-height: 70vh;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 4%;
+    padding-top: 2%;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+    margin-top: 50px;
+}
+
+.about h1{
+    margin: 0;
+    color: white;
+}
+
+.about .my_info{
+    color: white;
+}
+
+/*Le parcours*/
+
+.about .parcours_exp .h3_parcours{
+    color: white;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+
+.about .tout_parcours{
+    margin-top: 35px;
+}
+
+.about .tout_parcours .college{
+    display: flex;
+    gap: 70px;
+}
+
+.about .tout_parcours .college .dates{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: darkblue;
+    border-radius: 65px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.about .tout_parcours .college .place{
+    min-width: 595px;
+    background-color: white; 
+    border-radius: 30px;
+    justify-content: center;
+    align-self: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.about .tout_parcours .college .place p{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about .tout_parcours .lycée{
+    display: flex;
+    gap: 70px;
+    margin-top: 30px;
+}
+
+.about .tout_parcours .lycée .dates{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: darkblue;
+    border-radius: 65px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.about .tout_parcours .lycée .place{
+    max-width: 595px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.about .tout_parcours .lycée .place p{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+} 
+
+.about .tout_parcours .BUT_Informatique{
+    display: flex;
+    gap: 70px;
+    margin-top: 30px;
+}
+
+.about .tout_parcours .BUT_Informatique .dates{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: darkblue;
+    border-radius: 65px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.about .tout_parcours .BUT_Informatique .place{
+    min-width: 595px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.about .tout_parcours .BUT_Informatique .place p{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Les expériences professionnelles*/
+
+.h3_exp{
+    margin-top: 80px;
+    color: white;
+    margin-bottom: 0;
+}
+
+.about .tout_exp{
+    margin-top: 35px;
+}
+
+.about .tout_exp .stage_3eme{
+    display: flex;
+    gap: 70px;
+}
+
+.about .tout_exp .stage_3eme .dates{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: darkblue;
+    border-radius: 65px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.about .tout_exp .stage_3eme .description{
+    max-width: 800px;
+    background-color: white;
+    border-radius: 30px;
+    justify-content: center;
+    align-self: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.about .tout_exp .stage_3eme .description h4{
+    margin: 0;
+}
+
+.about .tout_exp .stage_3eme .description p{
+    margin: 0;
+}
+
+
+
+.about .tout_exp .desherbage{
+    display: flex;
+    gap: 70px;
+    margin-top: 30px;
+}
+
+.about .tout_exp .desherbage .dates{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: darkblue;
+    border-radius: 65px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.about .tout_exp .desherbage .description{
+    max-width: 800px;
+    background-color: white;
+    border-radius: 30px;
+    justify-content: center;
+    align-self: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.about .tout_exp .desherbage .description h4{
+    margin: 0;
+}
+
+.about .tout_exp .desherbage .description p{
+    margin: 0;
+}
+
+
+/* Mes projets*/
+
+.mes_projets {
+    margin-top: 50px;
+    background: radial-gradient(circle at 50% 50%, rgb(0, 0, 0), rgb(51, 79, 129));
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 5%;
+}
+
+.mes_projets h1{
+    color: white;
+}
+
+.gros_container_projet {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 50px; 
+    justify-content: center; 
+    margin-top: 50px;
+}
+
+.container_projet {
+    flex: 1 1 calc(27% - 40px); 
+    max-width: calc(27% - 40px); 
+    position: relative;
+    padding-bottom: 15%; 
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc; 
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    text-align: center;
+    border-radius: 35px;
+}
+
+.container_projet:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    border-radius: 35px;
+}
+
+.container_projet a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 35px;
+}
+
+
+/* Contact */
+
+.contact{
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    margin-top: 50px;
+    background: radial-gradient(circle at 50% 50%, rgb(0, 0, 0), rgb(51, 79, 129));
+    display: flex;
+    flex-direction: column;
+}
+
+.contact h1{
+    color: white;
+}
+
+.container_formulaire{
+    width: 40%;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 20px;
+}
+
+.container_formulaire h3{
+    color: white;
+}
+
+.container_formulaire h2{
+    text-align: center;
+}
+
+.container_formulaire form{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_formulaire label{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.container_formulaire input,textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container_formulaire textarea{
+    resize: vertical;
+}
+
+.container_formulaire button{
+    margin-top: 38px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.container_formulaire button:hover{
+    background: radial-gradient(circle at 50% 50%, rgb(0, 0, 0), rgb(51, 79, 129));
+    color: white;
+    transform: scale3d(1.02);
+    transition: 0.5s;
+    border-radius: 35px;
+}
+
+.linkedin{
+    margin-top: 80px;
+}
+
+.telephone{
+    margin-top: 15px;
+}
+    
+.contact a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Footer*/
+
+
+.copyright{
+    background-color: black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 20px;
+}
+
+.copyright p{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive*/
+
+@media screen and (max-width: 900px){
+
+    /* Navbar*/
+
+    .navbar{
+        padding: 0;
+    }
+
+    .menu_hamburger{
+        display: block;
+    }
+
+    .navbar .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255,255,255,0.20);
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+    }
+
+    .navbar .nav-links.mobile-menu{
+        transition: 1s;
+        margin-left: 0;
+    }
+
+    .navbar .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar .nav-links ul li{
+        margin: 15px 0;
+    }
+
+    .navbar .nav-links ul .CV_tel2{
+        display: block;
+        background-color: rgb(66, 50, 156);
+        padding: 8px;
+        border-radius: 25px;
+    }
+/*
+    .navbar .nav-links ul .CV_tel2:{
+        
+    }
+*/
+    .navbar .CV_tel{
+        display: none;
+    }
+
+    /* Section */
+
+    .sectiontout{
+        transition: margin-top 0.6s;
+    }
+
+    .section-deplace{
+        margin-top: 850px;
+    }
+
+
+    /* Carte principale*/
+
+    .container{
+        height: 93vh;
+    }
+
+    .card {
+        width: 30vh;
+        height: 55vh;
+        padding: 7%; 
+        margin: 0;
+        margin-top: 80px;
+    }
+
+    .card ul {
+        font-size: 0.9em; 
+    }
+
+
+
+    /* Bouton qui permet de remonter*/
+
+    .to-top{
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    @media screen and (max-width: 500px){
+        
+        .section-deplace{
+            margin-top: 770px;
+        }
+
+    }
+
+    @media screen and (max-width: 400px){
+
+        .card{
+            width: 35vh;
+            height: 75vh;
+        }
+
+        .section-deplace{
+            margin-top: 660px;
+        }
+    }
+}
+

@@ -1,0 +1,192 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Image de fond */
+
+.wallpaper_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: -1;
+    background-size: cover;
+    background-position: center; 
+}
+
+
+
+/* Navbar */
+
+.navbar{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    list-style-type: none;
+    align-items: center;
+    background-color: black;
+}
+
+.navbar .nav-links{
+    display: flex;
+}
+
+.navbar .nav-links ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar .nav-links ul li{
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li a{
+    text-decoration: none; 
+    color: white;
+}
+
+.navbar .nav-links ul li a:hover{
+    color: gray;
+}
+
+.navbar .CV_tel{
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: rgb(66, 50, 156);
+    padding: 8px;
+    
+}
+
+.navbar .CV_tel:hover{
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar .nav-links ul .CV_tel2{
+    display: none;
+}
+
+
+.menu_hamburger{
+    display: none;
+    position: absolute;
+    width: 40px;
+    right: 50px;
+    top: 3%;
+}
+
+/* Bouton arrière*/
+
+.back-button {
+        display: inline-block;
+        margin-top: 15px;
+        margin-left: 15px;
+        padding-top: 4.5px;
+        padding-bottom: 6.5px;
+        padding-left: 8.5px;
+        padding-right: px;
+        font-size: 35px;
+        color: white;
+        background-color: #366bff;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+    }
+
+.back-button:hover {
+    background-color: #4284ff;
+}
+
+
+/* Projet */
+
+.projet{
+    margin-top: 60px;
+    background: radial-gradient(circle at 50% 50%, rgb(0, 0, 0), rgb(51, 79, 129));
+    min-height: 50vh;
+    color: white;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+.projet h2{
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 900px){
+
+    /* Navbar*/
+
+    .navbar{
+        padding: 0;
+    }
+
+    .menu_hamburger{
+        display: block;
+    }
+
+    .navbar .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255,255,255,0.20);
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+    }
+
+    .navbar .nav-links.mobile-menu{
+        transition: 1s;
+        margin-left: 0;
+    }
+
+    .navbar .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar .nav-links ul li{
+        margin: 15px 0;
+    }
+
+    .navbar .nav-links ul .CV_tel2{
+        display: block;
+        background-color: rgb(66, 50, 156);
+        padding: 8px;
+        border-radius: 25px;
+    }
+/*
+    .navbar .nav-links ul .CV_tel2:{
+        
+    }
+*/
+    .navbar .CV_tel{
+        display: none;
+    }
+}
