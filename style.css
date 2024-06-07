@@ -150,7 +150,6 @@ body,html{
 
 .card {
     width: 34vh;
-    height: 62vh;
     padding: 2%;
     background: radial-gradient(circle at 50% 50%, rgb(0, 0, 0), rgb(51, 79, 129));
     border-radius: 10px;
