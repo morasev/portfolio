@@ -17,25 +17,6 @@ const menuHamburger = document.querySelector(".menu_hamburger")
         section.classList.toggle('section-deplace')
     })
 
-    document.getElementById('lienACopier').addEventListener('click', function(event) {
-        event.preventDefault();
-    
-        var texteACopier = "07 88 50 21 78";
-    
-        var tempTextarea = document.createElement('textarea');
-        tempTextarea.value = texteACopier;
-        document.body.appendChild(tempTextarea);
-    
-        tempTextarea.select();
-        tempTextarea.setSelectionRange(0, 99999);
-    
-        document.execCommand('copy');
-    
-        document.body.removeChild(tempTextarea);
-    
-        alert('Le texte a été copié dans le presse-papiers !');
-    });
-
     function sendEmail(event) {
         event.preventDefault();
         
@@ -48,3 +29,35 @@ const menuHamburger = document.querySelector(".menu_hamburger")
     
         window.location.href = mailtoLink;
     }
+
+    document.addEventListener('click', function (event) {
+        // Vérifier si l'élément cliqué a un attribut data-copy
+        if (event.target.hasAttribute('a_copier')) {
+            event.preventDefault();
+
+            // Récupèrer le texte à copier
+            var texteACopier = event.target.textContent.trim();
+
+            // Créer un élément temporaire pour copier le texte
+            var tempTextarea = document.createElement('textarea');
+            tempTextarea.value = texteACopier;
+            document.body.appendChild(tempTextarea);
+
+            tempTextarea.select();
+            tempTextarea.setSelectionRange(0, 99999);
+            document.execCommand('copy');
+
+            document.body.removeChild(tempTextarea);
+
+            // Afficher un message Copié !
+            var messageElement = event.target.nextElementSibling; 
+            if (messageElement && messageElement.classList.contains('message_copie')) {
+                messageElement.style.display = 'inline'; 
+
+                // Cacher le message après 2 secondes
+                setTimeout(function () {
+                    messageElement.style.display = 'none'; 
+                }, 2000);
+            }
+        }
+    });
