@@ -750,11 +750,9 @@ body,html{
     }
 
     .about .tout_parcours .college .place,
-    .about .tout_parcours .lycée .place,
-    .about .tout_parcours .BUT_Informatique .place,
     .about .tout_exp .stage .description,
     .about .tout_exp .desherbage .description {
-        min-width: auto;
+        min-width: 90%;
         max-width: 90%;
         padding: 30px;
     }
@@ -808,7 +806,12 @@ body,html{
 
         .card{
             width: 35vh;
-            height: 75vh;
+            height: auto;
+        }
+
+        .container{
+            height: 93vh;
+            padding-top: 35px;
         }
 
         .section-deplace{
